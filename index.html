@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>CNC.EXE — serwis CNC, podłączenie maszyn do sieci, monitoring pracy | Wrocław</title>
-<meta name="description" content="Serwis maszyn CNC (Heidenhain, Siemens, Fanuc), podłączenie maszyn do sieci zakładowej, monitoring czasu pracy z integracją do istniejących systemów oraz szkolenia dla działów utrzymania ruchu. Wrocław i okolice.">
+<title>CNC.EXE — CNC IIoT i Industry 4.0: podłączenie maszyn do sieci, backupy sterowań NC | Wrocław</title>
+<meta name="description" content="CNC IIoT i Industry 4.0: podłączenie maszyn CNC (Heidenhain, Siemens, Fanuc) do sieci zakładowej, pełne backupy sterowań NC, backupy falowników, monitoring czasu pracy z integracją do istniejących systemów, szkolenia UR. Wrocław i okolice.">
 <link rel="canonical" href="https://cncexe.pl/">
 <link rel="icon" type="image/png" href="img/logo.png">
 <meta property="og:type" content="website">
-<meta property="og:title" content="CNC.EXE — więcej niż serwis">
-<meta property="og:description" content="Maszyny CNC w sieci zakładowej, monitoring czasu pracy i szkolenia UR. Wrocław i okolice.">
+<meta property="og:title" content="CNC.EXE — CNC IIoT i Industry 4.0">
+<meta property="og:description" content="Maszyny CNC w sieci zakładowej, pełne backupy sterowań NC i monitoring czasu pracy. Wrocław i okolice.">
 <meta property="og:image" content="https://cncexe.pl/img/hero.jpg">
 <meta property="og:url" content="https://cncexe.pl/">
 <style>
@@ -56,7 +56,7 @@
   .hero { position: relative; min-height: min(88vh, 720px); display: flex; align-items: center; border-bottom: 3px solid var(--green);
     background: linear-gradient(90deg, var(--bg) 0%, rgba(8,18,22,.88) 42%, rgba(8,18,22,.25) 100%), url(img/hero.jpg) center right / cover no-repeat; }
   .hero .wrap { padding-top: 60px; padding-bottom: 60px; width: 100%; }
-  .hero h1 { font-size: clamp(38px, 6.5vw, 72px); font-weight: 800; max-width: 12ch; }
+  .hero h1 { font-size: clamp(38px, 6.5vw, 72px); font-weight: 800; }
   .hero h1 span { color: var(--green); }
   .hero p { max-width: 560px; font-size: 19px; margin: 20px 0 30px; color: #c9d6db; }
   .cta { display: flex; flex-wrap: wrap; gap: 12px; }
@@ -65,12 +65,13 @@
   .controls .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px 28px; padding-top: 20px; padding-bottom: 20px; font-weight: 700; letter-spacing: .1em; color: var(--muted); font-size: 15px; }
 
   section { padding: 84px 0; }
-  .grid { display: grid; gap: 18px; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); margin-top: 36px; }
+  .grid { display: grid; gap: 18px; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); margin-top: 36px; }
   .card { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 24px; }
   .card .num { color: var(--green); font-weight: 700; font-size: 14px; }
   .card h3 { font-size: 20px; margin: 10px 0 10px; }
   .card p { margin: 0; font-size: 16px; }
   .card ul { margin: 12px 0 0; padding-left: 18px; color: var(--muted); font-size: 16px; }
+  .tag { display: inline-block; margin-top: 14px; padding: 3px 12px; border: 1px solid var(--green); border-radius: 999px; color: var(--green); font-size: 13px; font-weight: 700; }
 
   /* why */
   .why { background: var(--panel); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
@@ -139,9 +140,9 @@
 <main>
   <section class="hero">
     <div class="wrap">
-      <p class="eyebrow">Serwis CNC · Wrocław i okolice</p>
-      <h1>Więcej niż <span>serwis.</span></h1>
-      <p>Podłączam maszyny CNC do sieci zakładowej i mierzę czas ich pracy. Nie musisz kupować drogiego systemu: dane trafiają do programów, które już działają w Twojej firmie.</p>
+      <p class="eyebrow">Wrocław i okolice</p>
+      <h1>CNC IIoT<br><span>CNC Industry 4.0</span></h1>
+      <p>Podłączam maszyny CNC do sieci zakładowej, robię pełne backupy sterowań NC i mierzę czas pracy maszyn. Bez drogich systemów: dane trafiają do programów, które już działają w Twojej firmie.</p>
       <div class="cta">
         <a class="btn solid" href="tel:+48607677080">Zadzwoń: 607 677 080</a>
         <a class="btn" href="mailto:biuro@cncexe.pl">biuro@cncexe.pl</a>
@@ -165,16 +166,22 @@
         </article>
         <article class="card">
           <span class="num">02</span>
+          <h3>Pełne backupy sterowań NC</h3>
+          <p>Kompletna kopia sterowania: parametry, PLC/PMC, programy, korektory i dane maszyny. Po awarii karty, dysku albo baterii maszynę da się odtworzyć. Zakres pracy wynika z typu sterowania, więc wycenę znasz z góry.</p>
+        </article>
+        <article class="card">
+          <span class="num">03</span>
+          <h3>Backupy falowników i szafy</h3>
+          <p>Falowniki i inne komponenty w szafie sterowniczej, które mają własne parametry. Ile ich jest i które warto zabezpieczyć, widać dopiero po otwarciu szafy.</p>
+          <span class="tag">Osobna wycena</span>
+        </article>
+        <article class="card">
+          <span class="num">04</span>
           <h3>Monitoring czasu pracy</h3>
           <p>Praca, postoje i alarmy każdej maszyny. Dane wpinam w systemy, które już masz w sieci: ERP, MES, bazę danych albo arkusz.</p>
         </article>
         <article class="card">
-          <span class="num">03</span>
-          <h3>Serwis maszyn CNC</h3>
-          <p>Diagnostyka i naprawy sterowań, PLC, napędów i układów I/O. Heidenhain, Siemens, Fanuc. Najpierw szukam przyczyny, potem naprawiam.</p>
-        </article>
-        <article class="card">
-          <span class="num">04</span>
+          <span class="num">05</span>
           <h3>Szkolenia dla UR</h3>
           <p>Praktyczne szkolenia dla działów utrzymania ruchu:</p>
           <ul>
@@ -182,6 +189,11 @@
             <li>LOTO i bezpieczna praca przy maszynie,</li>
             <li>dobre praktyki UR.</li>
           </ul>
+        </article>
+        <article class="card">
+          <span class="num">06</span>
+          <h3>Serwis maszyn CNC</h3>
+          <p>Diagnostyka i naprawy sterowań, PLC, napędów i układów I/O. Heidenhain, Siemens, Fanuc. Najpierw szukam przyczyny, potem naprawiam.</p>
         </article>
       </div>
     </div>
