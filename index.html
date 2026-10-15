@@ -97,10 +97,22 @@
   .steps li::before { content: "0" counter(s) " "; color: var(--green); }
 
   /* contact */
-  .contact { border-top: 3px solid var(--green); background: linear-gradient(180deg, var(--panel), var(--bg)); text-align: center; }
-  .contact p { max-width: 560px; margin: 0 auto 28px; }
-  .contact .cta { justify-content: center; }
-  .contact .area { margin-top: 26px; font-size: 15px; }
+  .contact { border-top: 3px solid var(--green); background: linear-gradient(180deg, var(--panel), var(--bg)); }
+  .contact .split { align-items: start; }
+  .contact address { font-style: normal; color: var(--muted); margin-top: 28px; font-size: 15px; }
+  .form { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 24px; display: grid; gap: 14px; }
+  .form h3 { font-size: 20px; }
+  .form .row { display: grid; gap: 14px; grid-template-columns: 1fr 1fr; }
+  .form label { display: grid; gap: 6px; font-size: 13px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+  .form input, .form textarea { font: inherit; font-size: 16px; font-weight: 400; color: var(--white); background: var(--bg); border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; width: 100%; }
+  .form input:focus, .form textarea:focus { outline: 2px solid var(--green); outline-offset: 1px; }
+  .form textarea { resize: vertical; }
+  .form .consent { display: flex; gap: 10px; align-items: flex-start; text-transform: none; letter-spacing: 0; font-weight: 400; font-size: 14px; }
+  .form .consent input { width: 18px; height: 18px; flex: none; margin-top: 2px; accent-color: var(--green); }
+  .form button { font: inherit; font-weight: 700; cursor: pointer; }
+  .sent { display: none; margin: 0; padding: 12px 14px; border: 1px solid var(--green); border-radius: 8px; color: var(--white); }
+  .sent:target { display: block; }
+  footer a { color: var(--muted); }
 
   footer { border-top: 1px solid var(--line); padding: 24px 0; font-size: 13px; color: var(--muted); }
   footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; letter-spacing: .08em; }
@@ -109,6 +121,7 @@
     nav { display: none; }
     header .btn { margin-left: auto; }
     .split { grid-template-columns: 1fr; }
+    .form .row { grid-template-columns: 1fr; }
     section { padding: 60px 0; }
     .hero { background: linear-gradient(180deg, rgba(8,18,22,.7), var(--bg) 85%), url(img/hero.jpg) 70% center / cover no-repeat; }
   }
@@ -257,15 +270,38 @@
   </section>
 
   <section id="kontakt" class="contact">
-    <div class="wrap">
-      <p class="eyebrow">Kontakt</p>
-      <h2>Porozmawiajmy o Twoich maszynach</h2>
-      <p>Zadzwoń albo napisz, jakie masz maszyny i sterowania. Ustalimy, od czego zacząć.</p>
-      <div class="cta">
-        <a class="btn solid" href="tel:+48607677080">607 677 080</a>
-        <a class="btn" href="mailto:biuro@cncexe.pl">biuro@cncexe.pl</a>
+    <div class="wrap split">
+      <div>
+        <p class="eyebrow">Kontakt</p>
+        <h2>Porozmawiajmy o Twoich maszynach</h2>
+        <p>Zadzwoń, napisz albo wyślij zgłoszenie. Napisz, jakie masz maszyny i sterowania, a ustalimy, od czego zacząć.</p>
+        <div class="cta">
+          <a class="btn solid" href="tel:+48607677080">607 677 080</a>
+          <a class="btn" href="mailto:biuro@cncexe.pl">biuro@cncexe.pl</a>
+        </div>
+        <address>
+          CNC.exe Jakub Jasiński<br>
+          ul. Źródlana 57, 57-100 Gościęcice<br>
+          Obszar działania: Dolnośląskie i okolice
+        </address>
       </div>
-      <p class="area">Dolnośląskie i okolice</p>
+
+      <form class="form" action="https://formsubmit.co/biuro@cncexe.pl" method="POST">
+        <p id="wyslano" class="sent">Dziękuję, zgłoszenie dotarło. Oddzwonię najszybciej, jak to możliwe.</p>
+        <h3>Wyślij zgłoszenie, oddzwonię</h3>
+        <input type="hidden" name="_subject" value="Zgłoszenie ze strony cncexe.pl">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_next" value="https://cncexe.pl/#wyslano">
+        <div class="row">
+          <label>Imię i nazwisko<input name="Imię i nazwisko" required autocomplete="name"></label>
+          <label>Telefon<input name="Telefon" type="tel" required autocomplete="tel"></label>
+        </div>
+        <label>E-mail<input name="email" type="email" autocomplete="email"></label>
+        <label>Maszyna i sterowanie<input name="Maszyna i sterowanie" placeholder="np. DMU 50, Heidenhain TNC 640"></label>
+        <label>Czego potrzebujesz?<textarea name="Opis" rows="4" placeholder="Podłączenie do sieci, backup, monitoring, szkolenie… Ile maszyn?"></textarea></label>
+        <label class="consent"><input type="checkbox" name="Zgoda" value="tak" required><span>Wyrażam zgodę na przetwarzanie moich danych osobowych w celu kontaktu, zgodnie z <a href="polityka-prywatnosci.html">polityką prywatności</a>.</span></label>
+        <button class="btn solid" type="submit">Wyślij</button>
+      </form>
     </div>
   </section>
 </main>
@@ -273,7 +309,7 @@
 <footer>
   <div class="wrap">
     <span>MACHINES / DATA / PEOPLE / PROCESS / RESULTS</span>
-    <span>© 2026 CNC.exe Jakub Jasiński · NIP 6751352174 · REGON 542080835</span>
+    <span>© 2026 CNC.exe Jakub Jasiński · ul. Źródlana 57, 57-100 Gościęcice · NIP 6751352174 · REGON 542080835 · <a href="polityka-prywatnosci.html">Polityka prywatności</a></span>
   </div>
 </footer>
 
