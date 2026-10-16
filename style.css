@@ -56,7 +56,6 @@ nav a:hover { color: var(--text); }
 .btn { display: inline-block; padding: 12px 22px; border-radius: 8px; font-weight: 700; text-decoration: none; border: 1px solid var(--green); }
 .btn.solid { background: var(--brand); border-color: var(--brand); color: #04110a; }
 .btn:hover { filter: brightness(1.12); }
-header .btn { padding: 8px 16px; font-size: 15px; white-space: nowrap; }
 .lang { display: flex; gap: 2px; font-size: 13px; font-weight: 700; letter-spacing: .06em; }
 .lang a { text-decoration: none; color: var(--muted); padding: 4px 7px; border-radius: 6px; }
 .lang a:hover { color: var(--text); }
@@ -104,6 +103,11 @@ section { padding: 84px 0; }
 .app small { display: block; color: var(--green); font-size: 12px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
 .app h3 { margin-top: 2px; }
 
+/* process terms */
+.terms { display: grid; gap: 18px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); margin-top: 18px; padding: 22px 24px; background: var(--panel); border: 1px solid var(--line); border-left: 4px solid var(--brand); border-radius: 12px; box-shadow: var(--shadow); }
+.terms b { color: var(--text); }
+.terms p { margin: 4px 0 0; font-size: 15px; }
+
 /* experience */
 .stats { display: flex; flex-wrap: wrap; gap: 18px; margin-top: 36px; }
 .stat { flex: 1 1 200px; background: var(--bg); border: 1px solid var(--line); border-radius: 12px; padding: 22px 24px; box-shadow: var(--shadow); }
@@ -140,6 +144,7 @@ section { padding: 84px 0; }
 footer { border-top: 1px solid var(--line); padding: 24px 0; font-size: 13px; color: var(--muted); }
 footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; letter-spacing: .08em; }
 footer a { color: var(--muted); }
+.reveal { font: inherit; letter-spacing: inherit; color: var(--green); background: none; border: 0; padding: 0; text-decoration: underline; cursor: pointer; }
 
 /* privacy policy pages */
 .doc { max-width: 760px; margin: 0 auto; padding: 40px 20px 60px; font-size: 16px; line-height: 1.7; }
@@ -160,9 +165,6 @@ footer a { color: var(--muted); }
   .form .row { grid-template-columns: 1fr; }
   section { padding: 60px 0; }
   .hero { background: var(--hero-overlay-mobile), url(img/hero.jpg) 70% center / cover no-repeat; }
-}
-@media (max-width: 480px) {
-  header .btn { display: none; }
 }
 @media (max-width: 420px) {
   .brand small { display: none; }
